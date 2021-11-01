@@ -4,6 +4,8 @@ ARG VERSION
 RUN pip install --upgrade pip \
     && rm -rf ~/.cache/pip
 
+RUN pip install scikit-learn==0.24.1
+
 RUN pip install flask
 
 # Add entrypoint (this allows variable expansion)
