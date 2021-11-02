@@ -10,6 +10,14 @@ app = Flask(__name__)
 def hello():
     return "try the predict route it is great!"
 
+def encode_data(df):
+    df['address'] = np.where(df['address']=='U', 1, 0)
+    df['Pstatus'] = np.where(df['Pstatus']=='T', 1, 0)
+    df['activities'] = np.where(df['activities']=='yes', 1, 0)
+    df['higher'] = np.where(df['higher']=='yes', 1, 0)
+    df['internet'] = np.where(df['internet']=='yes', 1, 0)
+    return df
+
 @app.route('/predict')
 def predict():
 	#use entries from the query string here but could also use json
@@ -30,11 +38,7 @@ def predict():
     })
     
     # Transform data
-    df['address'] = np.where(df['address']=='U', 1, 0)
-    df['Pstatus'] = np.where(df['Pstatus']=='A', 1, 0)
-    df['activities'] = np.where(df['activities']=='yes', 1, 0)
-    df['higher'] = np.where(df['higher']=='yes', 1, 0)
-    df['internet'] = np.where(df['internet']=='yes', 1, 0)
+    df = encode_data(df)
 
     # Predict
     prediction = clf.predict(df)
