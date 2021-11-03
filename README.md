@@ -16,6 +16,10 @@ Our API has one main endpoint /predict. To predict if a student will be a qualit
 This results in the example path `localhost:5000/predict?address=U&Pstatus=T&Medu=4&Fedu=4&studytime=4&activities=yes&higher=yes&internet=yes&absences=0&failures=0`
 
 ### Features Used in Training
+The features we used in our training were student's home address, parent cohabitation status,
+mother's education, father's education, weekly studytime, whether or not the student participates in activites, the desire to go into higher education, the number of school absences and the number of past class failures. We believed that these features would have the highest impact on a student's performance in school. 
+
+The baseline performance we found had a training accuracy of _____% and a test accuracy of ______%. The performance of our model after we added these features had a training accuracy of 95.96% and a test accuracy of 85.09%. 
 
 ### Deployment Instructions
 The API can be deployed by following the following steps:
