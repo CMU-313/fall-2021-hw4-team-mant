@@ -36,3 +36,6 @@ The API can be deployed by following the following steps:
   * If the docker container instantly exits, uncomment the `RUN pip install scikit-learn==0.24.1` line in the Dockerfile. This change is necessary if the model was built using an older version of sklearn.
 
 ### Testing
+To test the API, we use a bash script that is run whenever docker is built. It contains tests for requests that are expected to return 1, requests that are expected to return 0, and requests that are not supposed to work.
+
+To test the script manually, one can go into the the diretory `dockerfile` and enter `./test_api.sh` into the command line.
