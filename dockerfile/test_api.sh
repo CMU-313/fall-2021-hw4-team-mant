@@ -11,7 +11,7 @@ then
   exit 1
 fi
 
-if (($test2 != 0)) 
+if (($test2 != 1)) 
 then
   echo "2 failed, return 0, should be 1"
   exit 2
