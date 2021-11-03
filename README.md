@@ -20,7 +20,7 @@ This results in the example path `localhost:5000/predict?address=U&Pstatus=T&Med
 Preconditions for the service:
 Other than the variables/data described above, there are no preconditions for the service.
 
-How to understand the output: (insert here)
+The API will output 1 or 0 with a 1 corresponding to a 'quality student' (a student with G3 >= 15) and 0 corresponding to a student with G3 < 15.
 
 ### Features Used in Training
 The features we used in our training were student's home address type, parent cohabitation status, numeric ranking of mother's education, numeric ranking father's education, weekly studytime in hours, whether or not the student participates in activites, the desire to go into higher education, whether or not the student has internet access at home, the number of school absences and the number of past class failures. A student's home environment plays a large role in their attitude towards school, which is why we prioritized the first four features listed above, as well as the internet access feature. The amount of time a student spends studying and whether or not they dedicate time to extracurricular activities will also impact how much time they get to work on their assignments and study for exams, which impacts overall grades. Finally, we believed that higher absence and failure rates are strongly inversely correlated with high performance, so we added these two features as well.
