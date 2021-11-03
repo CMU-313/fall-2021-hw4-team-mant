@@ -16,10 +16,9 @@ Our API has one main endpoint /predict. To predict if a student will be a qualit
 This results in the example path `localhost:5000/predict?address=U&Pstatus=T&Medu=4&Fedu=4&studytime=4&activities=yes&higher=yes&internet=yes&absences=0&failures=0`
 
 ### Features Used in Training
-The features we used in our training were student's home address, parent cohabitation status,
-mother's education, father's education, weekly studytime, whether or not the student participates in activites, the desire to go into higher education, the number of school absences and the number of past class failures. We believed that these features would have the highest impact on a student's performance in school. 
+The features we used in our training were student's home address type, parent cohabitation status, numeric ranking of mother's education, numeric ranking father's education, weekly studytime in hours, whether or not the student participates in activites, the desire to go into higher education, whether or not the student has internet access at home, the number of school absences and the number of past class failures. A student's home environment plays a large role in their attitude towards school, which is why we prioritized the first four features listed above, as well as the internet access feature. The amount of time a student spends studying and whether or not they dedicate time to extracurricular activities will also impact how much time they get to work on their assignments and study for exams, which impacts overall grades. Finally, we believed that higher absence and failure rates are strongly inversely correlated with high performance, so we added these two features as well.
 
-The baseline performance we found had a training accuracy of _____% and a test accuracy of ______%. The performance of our model after we added these features had a training accuracy of 95.96% and a test accuracy of 85.09%. 
+The baseline performance we found had a test accuracy of 52%. The performance of our model after we added these features had a test accuracy of around 85%, which means that the addition of the features above caused an improvement of about 30% testing accuracy in the model. 
 
 ### Deployment Instructions
 The API can be deployed by following the following steps:
