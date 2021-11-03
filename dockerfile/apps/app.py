@@ -25,16 +25,16 @@ def predict():
     # "U";"T";4;3;4;"yes";"yes";"yes";0;4;
     data = request.args
     df = pd.DataFrame({
-        'address': pd.Series(data.get('address')),
-        'Pstatus': pd.Series(data.get('Pstatus')),
-        'Medu': pd.Series(data.get('Medu')), 
         'Fedu': pd.Series(data.get('Fedu')), 
-        'studytime': pd.Series(data.get('studytime')), 
+        'Medu': pd.Series(data.get('Medu')), 
+        'Pstatus': pd.Series(data.get('Pstatus')),
+        'absences': pd.Series(data.get('absences')),
         'activities': pd.Series(data.get('activities')),
+        'address': pd.Series(data.get('address')),
+        'failures': pd.Series(data.get('failures')), 
         'higher': pd.Series(data.get('higher')),
         'internet': pd.Series(data.get('internet')),
-        'failures': pd.Series(data.get('failures')), 
-        'absences': pd.Series(data.get('absences'))
+        'studytime': pd.Series(data.get('studytime'))
     })
     
     # Transform data
